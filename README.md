@@ -32,7 +32,7 @@ implementation 'com.github.EHENJOOM:EventCenter:1.0.0'
 
 ### 2.注册、注销监听器
 
-在A Activity的onCreate()方法中，调用**CEventCenter.registerEventListener(I_CEventListener listener, String topic/String[] topics) **方法注册监听器，A Activity需要实现I_CEventListener接口，重写**onCEvent(String topic, int msgCode, int resultCode, Object obj)**方法，同时不要忘记在onDestroy()方法中调用**CEventCenter.unregisterEventListener(I_CEventListener listener, String topic/String[] topics) **方法注销监听器。
+在A Activity的onCreate()方法中，调用CEventCenter.registerEventListener(I_CEventListener listener, String topic/String[] topics)方法注册监听器，A Activity需要实现I_CEventListener接口，重写onCEvent(String topic, int msgCode, int resultCode, Object obj)方法，同时不要忘记在onDestroy()方法中调用CEventCenter.unregisterEventListener(I_CEventListener listener, String topic/String[] topics)方法注销监听器。
 
 ```java
 public class A_Activity extends AppCompatActivity implements I_CEventListener{
